@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hobbies & Interests - Atheeq R</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Hobbies and interests of Atheeq R, Senior Full-Stack Engineer." />
+
+    <!-- Same font & styles as index (copy-paste for consistency) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* EXACT same CSS as index up to footer; shortened comment here for clarity.
+           For your real file, copy the whole <style> from index.html and paste it here,
+           so design + theme toggle stay identical. */
+
+        :root {
+            --bg: #0b1120;
+            --bg-alt: #020617;
+            --card-bg: #020617;
+            --accent: #22c55e;
+            --accent-soft: rgba(34,197,94,0.12);
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --border-subtle: #1f2933;
+            --shadow-soft: 0 18px 40px rgba(15,23,42,0.6);
+            --radius-lg: 18px;
+            --radius-xl: 28px;
+            --radius-pill: 999px;
+            --transition-fast: 180ms ease-out;
+            --max-width: 1080px;
+        }
+        body[data-theme="light"] {
+            --bg: #f3f4f6;
+            --bg-alt: #ffffff;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #4b5563;
+            --border-subtle: #e5e7eb;
+            --shadow-soft: 0 18px 40px rgba(15,23,42,0.25);
+        }
+        *{box-sizing:border-box;}
+        body{
+            margin:0;
+            font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+            background:radial-gradient(circle at top,rgba(34,197,94,0.16),transparent 55%),var(--bg);
+            color:var(--text-main);
+            line-height:1.5;
+        }
+        a{color:var(--accent);text-decoration:none;}
+        a:hover{text-decoration:underline;}
+        .page{max-width:var(--max-width);margin:0 auto;padding:1.5rem 1.25rem 3rem;}
+
+        header{
+            position:sticky;top:0;z-index:20;
+            backdrop-filter:blur(20px);
+            background:linear-gradient(to bottom,rgba(15,23,42,0.96),rgba(15,23,42,0.72));
+            border-bottom:1px solid rgba(148,163,184,0.18);
+        }
+        body[data-theme="light"] header{
+            background:linear-gradient(to bottom,rgba(249,250,251,0.98),rgba(243,244,246,0.9));
+            border-bottom-color:rgba(148,163,184,0.35);
+        }
+        .nav-inner{
+            max-width:var(--max-width);margin:0 auto;
+            padding:0.75rem 1.25rem;
+            display:flex;align-items:center;justify-content:space-between;gap:1rem;
+        }
+        .brand{display:flex;align-items:center;gap:0.6rem;}
+        .brand-initials{
+            width:32px;height:32px;border-radius:12px;
+            background:radial-gradient(circle at 20% 0%,#4ade80,#16a34a);
+            display:flex;align-items:center;justify-content:center;
+            font-size:0.9rem;font-weight:700;color:#022c22;
+        }
+        .brand-text{display:flex;flex-direction:column;}
+        .brand-name{font-size:0.98rem;font-weight:600;}
+        .brand-role{font-size:0.72rem;color:var(--text-muted);}
+        .nav-links{display:flex;gap:0.9rem;align-items:center;font-size:0.82rem;}
+        .nav-links a{
+            padding:0.3rem 0.7rem;border-radius:999px;
+            color:var(--text-muted);border:1px solid transparent;text-decoration:none;
+        }
+        .nav-links a:hover{
+            color:var(--text-main);
+            border-color:rgba(148,163,184,0.4);
+            background:rgba(15,23,42,0.6);
+        }
+        .nav-cta{
+            border-radius:var(--radius-pill);
+            padding:0.35rem 0.95rem;
+            border:1px solid rgba(34,197,94,0.4);
+            background:linear-gradient(to right,#16a34a,#22c55e);
+            color:#022c22!important;font-weight:600;
+            box-shadow:0 10px 30px rgba(22,163,74,0.45);
+        }
+        .nav-cta:hover{background:linear-gradient(to right,#22c55e,#4ade80);border-color:#4ade80;}
+        .theme-toggle{
+            border-radius:999px;border:1px solid rgba(148,163,184,0.6);
+            background:rgba(15,23,42,0.95);
+            padding:0.25rem 0.65rem;
+            display:inline-flex;align-items:center;justify-content:center;
+            cursor:pointer;font-size:0.9rem;color:var(--text-main);
+            transition:background var(--transition-fast),border-color var(--transition-fast),transform var(--transition-fast);
+        }
+        .theme-toggle:hover{background:rgba(15,23,42,1);transform:translateY(-1px);}
+        body[data-theme="light"] .theme-toggle{background:#f3f4f6;}
+        .theme-icon{line-height:1;}
+
+        section{margin-bottom:2.4rem;scroll-margin-top:90px;}
+        .section-heading{
+            font-size:1.05rem;font-weight:600;
+            display:flex;align-items:baseline;justify-content:space-between;
+            gap:1rem;margin-bottom:1rem;
+        }
+        .section-heading span{font-size:0.8rem;color:var(--text-muted);font-weight:400;}
+        .muted{color:var(--text-muted);font-size:0.86rem;}
+
+        .card-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:1rem;
+        }
+        .card{
+            background:rgba(15,23,42,0.96);
+            border-radius:18px;
+            padding:1rem 1.1rem;
+            border:1px solid rgba(30,64,175,0.5);
+            box-shadow:0 18px 40px rgba(15,23,42,0.8);
+        }
+        body[data-theme="light"] .card{
+            background:#ffffff;
+            border-color:rgba(148,163,184,0.6);
+            box-shadow:0 16px 36px rgba(148,163,184,0.35);
+        }
+        .card h3{margin:0 0 0.35rem;font-size:0.98rem;}
+        .card p{margin:0.35rem 0;font-size:0.86rem;color:var(--text-muted);}
+        .card ul{margin:0.4rem 0 0;padding-left:1.05rem;font-size:0.84rem;}
+
+        footer{
+            margin-top:2rem;padding-top:1.2rem;
+            border-top:1px solid rgba(31,41,55,0.9);
+            font-size:0.75rem;color:var(--text-muted);text-align:center;
+        }
+        body[data-theme="light"] footer{border-top-color:rgba(209,213,219,0.9);}
+    </style>
+</head>
+<body data-theme="dark">
+
+<header>
+    <div class="nav-inner">
+        <div class="brand">
+            <div class="brand-initials">AR</div>
+            <div class="brand-text">
+                <div class="brand-name">Atheeq R</div>
+                <div class="brand-role">Senior Full-Stack Engineer</div>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <!-- On this page, menu links take user back to main resume sections -->
+            <a href="index.html#summary">Summary</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#education">Education</a>
+            <a href="Contact.html" class="nav-cta">Contact</a>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark/light theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <section id="hobbies-hero">
+        <div class="section-heading">
+            <div>Hobbies & Interests <span>Beyond code</span></div>
+        </div>
+        <p class="muted">
+            Outside of work, I like to work on things that keep my mind sharp and my energy positive —
+            experimenting with new tech, creating content, exploring food, and spending time in nature.
+        </p>
+    </section>
+
+    <section id="hobby-categories">
+        <div class="card-grid">
+            <article class="card">
+                <h3>Tech & Learning</h3>
+                <p>
+                    I enjoy exploring new tools in cloud, DevOps and e-commerce ecosystems and building small
+                    side projects to try them in real scenarios.
+                </p>
+                <ul>
+                    <li>Building mini e-commerce prototypes with Magento / Shopify.</li>
+                    <li>Experimenting with AWS services and automation pipelines.</li>
+                    <li>Following engineering blogs, architecture patterns and case studies.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Content & Side Projects</h3>
+                <p>
+                    I like converting what I learn into simple content that can help others understand tech in a
+                    practical way.
+                </p>
+                <ul>
+                    <li>Planning tutorial content on e-commerce integrations and workflows.</li>
+                    <li>Designing clean UI layouts for portfolio and product websites.</li>
+                    <li>Documenting processes, best-practices and checklists for teams.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Food & Cooking</h3>
+                <p>
+                    Cooking is a creative and relaxing activity for me, especially South Indian home-style food.
+                </p>
+                <ul>
+                    <li>Experimenting with healthy versions of classic dishes.</li>
+                    <li>Hosting family & friends with simple but flavourful meals.</li>
+                    <li>Exploring how food, energy and productivity are connected.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Travel & Nature</h3>
+                <p>
+                    I enjoy quiet places, hills and nature spots where I can disconnect from screens and reset.
+                </p>
+                <ul>
+                    <li>Exploring new locations around UAE and India whenever possible.</li>
+                    <li>Nature walks, light hiking and scenic drives.</li>
+                    <li>Photography of landscapes and city views.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © <span id="year"></span> Atheeq R · Hobbies & Interests
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = themeToggle ? themeToggle.querySelector(".theme-icon") : null;
+
+    function setTheme(theme) {
+        document.body.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        if (themeIcon) {
+            themeIcon.textContent = theme === "dark" ? "🌙" : "☀️";
+        }
+    }
+
+    (function initTheme() {
+        const stored = localStorage.getItem("theme");
+        if (stored === "dark" || stored === "light") {
+            setTheme(stored);
+        } else {
+            const prefersDark = window.matchMedia &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches;
+            setTheme(prefersDark ? "dark" : "light");
+        }
+    })();
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            const current = document.body.getAttribute("data-theme");
+            setTheme(current === "dark" ? "light" : "dark");
+        });
+    }
+</script>
+
+</body>
+</html>
