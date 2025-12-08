@@ -656,6 +656,90 @@ body[data-theme="light"] .logo-pill span {
         footer a {
             color: var(--text-muted);
         }
+
+    /* Mobile nav toggle */
+.nav-menu-toggle {
+    display: none; /* desktop hidden */
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.6);
+    background: rgba(15,23,42,0.95);
+    color: var(--text-main);
+    padding: 0.2rem 0.7rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.nav-menu-toggle:hover {
+    background: rgba(15,23,42,1);
+    transform: translateY(-1px);
+}
+
+body[data-theme="light"] .nav-menu-toggle {
+    background: #f3f4f6;
+}
+
+/* Mobile layout */
+@media (max-width: 720px) {
+    .nav-inner {
+        padding: 0.6rem 1rem;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        left: 1rem;
+        margin-top: 0.4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem;
+        border-radius: 1rem;
+        background: rgba(15,23,42,0.98);
+        border: 1px solid rgba(55,65,81,0.9);
+        box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity 150ms ease-out, transform 150ms ease-out;
+        z-index: 25;
+    }
+
+    body[data-theme="light"] .nav-links {
+        background: #ffffff;
+        border-color: rgba(148,163,184,0.9);
+    }
+
+    .nav-links.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links a,
+    .nav-links .theme-toggle,
+    .nav-links .nav-cta {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .nav-links a,
+    .nav-links .theme-toggle {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .nav-cta {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .nav-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
     </style>
 </head>
 <body data-theme="dark">
@@ -1229,6 +1313,7 @@ body[data-theme="light"] .logo-pill span {
 
 </body>
 </html>
+
 
 
 
