@@ -366,10 +366,28 @@ body[data-theme="light"] .nav-menu-toggle {
             setTheme(current === "dark" ? "light" : "dark");
         });
     }
+
+        // ----- Mobile nav toggle (shared) -----
+    const navToggleBtn = document.getElementById("navToggle");
+    const navLinksContainer = document.getElementById("navLinks");
+
+    if (navToggleBtn && navLinksContainer) {
+        navToggleBtn.addEventListener("click", () => {
+            navLinksContainer.classList.toggle("is-open");
+        });
+
+        navLinksContainer.addEventListener("click", (e) => {
+            if (e.target.matches("a")) {
+                navLinksContainer.classList.remove("is-open");
+            }
+        });
+    }
+
 </script>
 
 </body>
 </html>
+
 
 
 
