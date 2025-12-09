@@ -716,20 +716,25 @@ body[data-theme="light"] .nav-menu-toggle {
         transform: translateY(0);
     }
 
+    /* Menu items + CTA stay full width */
     .nav-links a,
-    .nav-links .theme-toggle,
     .nav-links .nav-cta {
         width: 100%;
         justify-content: flex-start;
-    }
-
-    .nav-links a,
-    .nav-links .theme-toggle {
         padding: 0.5rem 0.75rem;
     }
 
     .nav-cta {
         text-align: center;
+        justify-content: center;
+    }
+
+    /* Theme toggle becomes a small pill button on the right */
+    .nav-links .theme-toggle {
+        align-self: flex-end;
+        width: auto;
+        padding: 0.3rem 0.8rem;
+        margin-top: 0.4rem;
         justify-content: center;
     }
 
@@ -1433,6 +1438,7 @@ body[data-theme="light"] .nav-menu-toggle {
 
 </body>
 </html>
+
 
 
 
