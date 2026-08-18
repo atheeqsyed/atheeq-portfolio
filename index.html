@@ -1,1499 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Primary SEO -->
-<title>Atheeq R | Senior Backend Engineer | Distributed Systems, Integrations, AWS</title>
-  <meta name="description" content="Senior Software Engineer with 10+ years of experience delivering scalable e-commerce platforms across UAE, Singapore, Australia, and India. Specialized in Shopify Plus, Magento 2, checkout/payments, POS/ERP integrations, and AWS cloud architecture." />
-
-  <!-- Canonical -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atheeq R | Senior Backend Engineer | Distributed Systems & Integrations</title>
+  <meta name="description" content="Senior Backend Engineer in Dubai with 10+ years of experience in distributed systems, APIs, payments, commerce platforms, AWS, Shopify Plus and Magento 2." />
+  <meta name="theme-color" content="#0b1220" />
   <link rel="canonical" href="https://atheeqsyed.github.io/atheeq-portfolio/" />
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="Atheeq R | Senior Backend Engineer" />
+  <meta property="og:description" content="Distributed systems, APIs, payments, commerce integrations and AWS." />
   <meta property="og:url" content="https://atheeqsyed.github.io/atheeq-portfolio/" />
-  <meta property="og:title" content="Atheeq R – Senior Backend Engineer (Distributed Systems & Integrations)" />
-  <meta property="og:description" content="Interactive resume for Atheeq R, showcasing e-commerce development, platform integrations, performance optimization and automation skills." />
-  <meta property="og:image" content="https://atheeqsyed.github.io/atheeq-portfolio/og-image.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Atheeq R – Senior Software Engineer (E-commerce Platforms & Integrations)" />
-  <meta name="twitter:description" content="Interactive resume for Atheeq R, specializing in Magento 2, Shopify Plus, AWS and end-to-end e-commerce integrations." />
-  <meta name="twitter:image" content="https://atheeqsyed.github.io/atheeq-portfolio/og-image.png" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <!-- optional: high-res icon -->
-  <link rel="apple-touch-icon" href="favicon-192.png" />
-    <style>
-        :root {
-            /* Base (dark theme defaults) */
-            --bg: #0b1120;
-            --bg-alt: #020617;
-            --card-bg: #020617;
-            --accent: #22c55e;
-            --accent-soft: rgba(34,197,94,0.12);
-            --text-main: #e5e7eb;
-            --text-muted: #9ca3af;
-            --border-subtle: #1f2933;
-            --shadow-soft: 0 18px 40px rgba(15,23,42,0.6);
-            --radius-lg: 18px;
-            --radius-xl: 28px;
-            --radius-pill: 999px;
-            --transition-fast: 180ms ease-out;
-            --max-width: 1080px;
-        }
-
-        /* Light theme overrides */
-        body[data-theme="light"] {
-            --bg: #f3f4f6;
-            --bg-alt: #ffffff;
-            --card-bg: #ffffff;
-            --text-main: #0f172a;
-            --text-muted: #4b5563;
-            --border-subtle: #e5e7eb;
-            --shadow-soft: 0 18px 40px rgba(15,23,42,0.25);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, rgba(34,197,94,0.16), transparent 55%), var(--bg);
-            color: var(--text-main);
-            line-height: 1.5;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .page {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 1.5rem 1.25rem 3rem;
-        }
-
-        /* Header / Nav */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            backdrop-filter: blur(20px);
-            background: linear-gradient(to bottom, rgba(15,23,42,0.96), rgba(15,23,42,0.72));
-            border-bottom: 1px solid rgba(148,163,184,0.18);
-        }
-
-        body[data-theme="light"] header {
-            background: linear-gradient(to bottom, rgba(249,250,251,0.98), rgba(243,244,246,0.9));
-            border-bottom-color: rgba(148,163,184,0.35);
-        }
-
-        .nav-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0.75rem 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .brand-initials {
-            width: 32px;
-            height: 32px;
-            border-radius: 12px;
-            background: radial-gradient(circle at 20% 0%, #4ade80, #16a34a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #022c22;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-name {
-            font-size: 0.98rem;
-            font-weight: 600;
-        }
-
-        .brand-role {
-            font-size: 0.72rem;
-            color: var(--text-muted);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 0.9rem;
-            align-items: center;
-            font-size: 0.82rem;
-        }
-
-        .nav-links a {
-            padding: 0.3rem 0.7rem;
-            border-radius: 999px;
-            color: var(--text-muted);
-            border: 1px solid transparent;
-            text-decoration: none;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-main);
-            border-color: rgba(148,163,184,0.4);
-            background: rgba(15,23,42,0.6);
-        }
-
-        .nav-links a.active {
-            color: var(--text-main);
-            border-color: rgba(148,163,184,0.8);
-            background: rgba(15,23,42,0.9);
-        }
-
-        body[data-theme="light"] .nav-links a.active {
-            background: rgba(229,231,235,0.9);
-        }
-
-        .nav-cta {
-            border-radius: var(--radius-pill);
-            padding: 0.35rem 0.95rem;
-            border: 1px solid rgba(34,197,94,0.4);
-            background: linear-gradient(to right,#16a34a,#22c55e);
-            color: #022c22 !important;
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(22,163,74,0.45);
-        }
-
-        .nav-cta:hover {
-            background: linear-gradient(to right,#22c55e,#4ade80);
-            border-color: #4ade80;
-        }
-
-        /* Theme toggle button */
-        .theme-toggle {
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.95);
-            padding: 0.25rem 0.65rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 0.9rem;
-            color: var(--text-main);
-            transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
-        }
-
-        .theme-toggle:hover {
-            background: rgba(15,23,42,1);
-            transform: translateY(-1px);
-        }
-
-        body[data-theme="light"] .theme-toggle {
-            background: #f3f4f6;
-        }
-
-        .theme-icon {
-            line-height: 1;
-        }
-
-        /* Hero */
-        .hero {
-            padding-top: 2rem;
-            padding-bottom: 2.5rem;
-            display: grid;
-            grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
-            gap: 2rem;
-            align-items: center;
-        }
-
-        @media (max-width: 840px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-
-        .hero-main-title {
-            font-size: clamp(1.9rem, 2.6vw, 2.4rem);
-            font-weight: 600;
-            letter-spacing: -0.04em;
-        }
-
-        .hero-tagline {
-            margin-top: 0.4rem;
-            font-size: 0.96rem;
-            color: var(--text-muted);
-        }
-
-        .hero-highlight {
-            margin-top: 0.9rem;
-            font-size: 0.86rem;
-            color: #bbf7d0;
-            background: linear-gradient(to right, rgba(34,197,94,0.18), rgba(8,47,73,0.2));
-            border-radius: var(--radius-pill);
-            padding: 0.28rem 0.7rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            border: 1px solid rgba(34,197,94,0.3);
-        }
-
-        body[data-theme="light"] .hero-highlight {
-            color: #166534;
-            background: rgba(22,163,74,0.1);
-        }
-
-        .hero-highlight span {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .hero-actions {
-            margin-top: 1.4rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.4rem;
-            font-size: 0.86rem;
-            border-radius: var(--radius-pill);
-            padding: 0.55rem 1.2rem;
-            border: 1px solid transparent;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
-        }
-
-        .btn-primary {
-            background: linear-gradient(to right,#22c55e,#4ade80);
-            color: #022c22;
-            font-weight: 600;
-            box-shadow: var(--shadow-soft);
-            border-color: rgba(34,197,94,0.72);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 22px 55px rgba(21,128,61,0.7);
-        }
-
-        .btn-ghost {
-            background: rgba(15,23,42,0.7);
-            color: var(--text-main);
-            border-color: rgba(148,163,184,0.4);
-        }
-
-        body[data-theme="light"] .btn-ghost {
-            background: #e5e7eb;
-            color: #111827;
-        }
-
-        .btn-ghost:hover {
-            background: rgba(15,23,42,0.9);
-            transform: translateY(-1px);
-        }
-
-        body[data-theme="light"] .btn-ghost:hover {
-            background: #d1d5db;
-        }
-
-        .hero-meta {
-            margin-top: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.9rem;
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }
-
-        .hero-meta span {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0.25rem 0.7rem;
-            border-radius: 999px;
-            background: rgba(15,23,42,0.9);
-            border: 1px solid rgba(51,65,85,0.8);
-        }
-
-        body[data-theme="light"] .hero-meta span {
-            background: #e5e7eb;
-            border-color: #cbd5f5;
-        }
-
-        .hero-card {
-            border-radius: var(--radius-xl);
-            background: radial-gradient(circle at top left, rgba(34,197,94,0.18), transparent 55%), var(--card-bg);
-            border: 1px solid rgba(148,163,184,0.23);
-            padding: 1.4rem 1.3rem;
-            box-shadow: var(--shadow-soft);
-        }
-
-        .hero-card h2 {
-            font-size: 1rem;
-            margin-top: 0;
-            margin-bottom: 0.6rem;
-        }
-
-        .hero-card p {
-            margin: 0;
-            font-size: 0.86rem;
-            color: var(--text-muted);
-        }
-
-        .hero-card ul {
-            margin: 0.7rem 0 0;
-            padding-left: 1.1rem;
-            font-size: 0.82rem;
-            color: var(--text-main);
-        }
-
-        /* Generic Section */
-        section {
-            margin-bottom: 2.4rem;
-            scroll-margin-top: 90px; /* fixes anchor scroll under sticky header */
-        }
-
-        .section-heading {
-            font-size: 1.05rem;
-            font-weight: 600;
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-heading span {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        /* Cards / Layouts */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1rem;
-        }
-
-        .card {
-            background: rgba(15,23,42,0.96);
-            border-radius: var(--radius-lg);
-            padding: 1rem 1.1rem;
-            border: 1px solid rgba(30,64,175,0.5);
-            box-shadow: 0 18px 40px rgba(15,23,42,0.8);
-        }
-
-        body[data-theme="light"] .card {
-            background: #ffffff;
-            border-color: rgba(148,163,184,0.6);
-            box-shadow: 0 16px 36px rgba(148,163,184,0.35);
-        }
-
-        .card h3 {
-            margin: 0 0 0.35rem;
-            font-size: 0.98rem;
-        }
-
-        .card h4 {
-            margin: 0.15rem 0;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .chip-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.45rem;
-            margin-top: 0.4rem;
-            font-size: 0.72rem;
-        }
-
-        .chip {
-            padding: 0.2rem 0.6rem;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.6);
-            color: var(--text-muted);
-            background: rgba(15,23,42,0.85);
-        }
-
-        body[data-theme="light"] .chip {
-            background: #eff6ff;
-            color: #1d4ed8;
-            border-color: #bfdbfe;
-        }
-
-        .card ul {
-            margin: 0.55rem 0 0;
-            padding-left: 1.05rem;
-            font-size: 0.82rem;
-            color: var(--text-main);
-        }
-
-        .muted {
-            color: var(--text-muted);
-            font-size: 0.86rem;
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 0.9rem;
-        }
-
-        .skill-block {
-            padding: 0.85rem 0.9rem;
-            border-radius: var(--radius-lg);
-            background: rgba(15,23,42,0.92);
-            border: 1px solid rgba(55,65,81,0.9);
-        }
-
-        body[data-theme="light"] .skill-block {
-            background: #ffffff;
-            border-color: rgba(148,163,184,0.7);
-        }
-
-        .skill-block h3 {
-            margin: 0 0 0.45rem;
-            font-size: 0.86rem;
-            color: #e5e7eb;
-        }
-
-        body[data-theme="light"] .skill-block h3 {
-            color: #111827;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.35rem;
-            font-size: 0.75rem;
-        }
-
-        .skill-tags span {
-            padding: 0.15rem 0.55rem;
-            border-radius: 999px;
-            background: rgba(30,64,175,0.5);
-            border: 1px solid rgba(59,130,246,0.55);
-            color: #e5e7eb;
-        }
-
-        body[data-theme="light"] .skill-tags span {
-            background: #eff6ff;
-            border-color: #bfdbfe;
-            color: #1d4ed8;
-        }
-
-        /* Tech stack logo row */
-        .tech-stack-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-        }
-
-     .logo-pill {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 0.9rem;
-    border-radius: 999px;
-    background: rgba(15,23,42,0.95);
-    border: 1px solid rgba(51,65,85,0.9);
-}
-
-        body[data-theme="light"] .logo-pill {
-            background: #ffffff;
-            border-color: rgba(148,163,184,0.9);
-        }
-
-        .logo-pill img {
-            height: 22px;
-            width: 22px;
-                object-fit: contain;
-    display: block;
-        }
-
-        .logo-pill span {
-            font-size: 0.82rem;
-            color: var(--text-main);
-        }
-
-body[data-theme="light"] .logo-pill span {
-    color: #0f172a;
-}
-
-        /* Timeline (Education) */
-        .timeline {
-            border-left: 1px solid rgba(55,65,81,0.9);
-            padding-left: 1rem;
-            margin-left: 0.3rem;
-        }
-
-        body[data-theme="light"] .timeline {
-            border-left-color: rgba(156,163,175,0.9);
-        }
-
-        .timeline-item {
-            margin-bottom: 1rem;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -1.24rem;
-            top: 0.12rem;
-            width: 10px;
-            height: 10px;
-            border-radius: 999px;
-            background: var(--accent);
-            box-shadow: 0 0 0 4px rgba(34,197,94,0.22);
-        }
-
-        .timeline-item h3 {
-            margin: 0;
-            font-size: 0.88rem;
-        }
-
-        .timeline-item p {
-            margin: 0.1rem 0;
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }
-
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.3fr);
-            gap: 1rem;
-        }
-
-        @media (max-width: 720px) {
-            .contact-grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-
-        .contact-card {
-            padding: 1rem 1.1rem;
-            border-radius: var(--radius-lg);
-            background: rgba(15,23,42,0.96);
-            border: 1px solid rgba(55,65,81,0.9);
-        }
-
-        body[data-theme="light"] .contact-card {
-            background: #ffffff;
-            border-color: rgba(148,163,184,0.9);
-        }
-
-        .contact-list {
-            list-style: none;
-            padding: 0;
-            margin: 0.3rem 0 0;
-            font-size: 0.86rem;
-        }
-
-        .contact-list li {
-            margin-bottom: 0.35rem;
-        }
-
-        /* Other section */
-        .other-links ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0.3rem 0 0;
-            font-size: 0.86rem;
-        }
-
-        .other-links li {
-            margin-bottom: 0.35rem;
-        }
-
-        footer {
-            margin-top: 2rem;
-            padding-top: 1.2rem;
-            border-top: 1px solid rgba(31,41,55,0.9);
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-align: center;
-        }
-
-        body[data-theme="light"] footer {
-            border-top-color: rgba(209,213,219,0.9);
-        }
-
-        footer a {
-            color: var(--text-muted);
-        }
-
-    /* Mobile nav toggle */
-.nav-menu-toggle {
-    display: none; /* desktop hidden */
-    border-radius: 999px;
-    border: 1px solid rgba(148,163,184,0.6);
-    background: rgba(15,23,42,0.95);
-    color: var(--text-main);
-    padding: 0.2rem 0.7rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background var(--transition-fast), transform var(--transition-fast);
-}
-
-.nav-menu-toggle:hover {
-    background: rgba(15,23,42,1);
-    transform: translateY(-1px);
-}
-
-body[data-theme="light"] .nav-menu-toggle {
-    background: #f3f4f6;
-}
-
-/* Mobile layout */
-@media (max-width: 720px) {
-    .nav-inner {
-        padding: 0.6rem 1rem;
+  <style>
+    :root{
+      --bg:#0b1220;--panel:#111a2b;--panel2:#0f1727;--text:#eef4ff;--muted:#9eb0ca;
+      --line:#22304a;--accent:#62a8ff;--accent2:#7ee7c4;--chip:#17243b;--shadow:0 18px 55px rgba(0,0,0,.24);
+      --max:1160px;--radius:22px
     }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 1rem;
-        left: 1rem;
-        margin-top: 0.4rem;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.75rem;
-        border-radius: 1rem;
-        background: rgba(15,23,42,0.98);
-        border: 1px solid rgba(55,65,81,0.9);
-        box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-6px);
-        transition: opacity 150ms ease-out, transform 150ms ease-out;
-        z-index: 25;
-    }
-
-    body[data-theme="light"] .nav-links {
-        background: #ffffff;
-        border-color: rgba(148,163,184,0.9);
-    }
-
-    .nav-links.is-open {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
-
-    /* Menu items + CTA stay full width */
-    .nav-links a,
-    .nav-links .nav-cta {
-        width: 100%;
-        justify-content: flex-start;
-        padding: 0.5rem 0.75rem;
-    }
-
-    .nav-cta {
-        text-align: center;
-        justify-content: center;
-    }
-
-    /* Theme toggle becomes a small pill button on the right */
-    .nav-links .theme-toggle {
-        align-self: flex-end;
-        width: auto;
-        padding: 0.3rem 0.8rem;
-        margin-top: 0.4rem;
-        justify-content: center;
-    }
-
-    .nav-menu-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-@media (max-width: 600px) {
-    .page {
-        padding: 1.2rem 1rem 2.4rem;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .tech-stack-row {
-        gap: 0.6rem;
-    }
-}
-
-     /* --- Extra Pages (Hobbies & Contact full page) Mobile Fix --- */
-.extra-pages {
-    display: flex;
-    gap: 0.8rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
-
-.extra-pages a {
-    padding: 0.45rem 1rem;
-    border-radius: 999px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.extra-pages a:hover {
-    background: var(--accent);
-    color: #020617;
-}
-
-/* Mobile layout */
-@media (max-width: 720px) {
-    .extra-pages {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-    }
-
-    .extra-pages a {
-        width: 100%;
-        text-align: center;
-    }
-}
-/* --- Extra pages (Hobbies & Contact full page) --- */
-.other-links ul {
-    list-style: none;
-    margin: 0.5rem 0 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.other-links li {
-    margin: 0;
-}
-
-.other-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.45rem 1.1rem;
-    border-radius: 999px;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
-}
-
-.other-links a:hover {
-    background: var(--accent);
-    color: #020617; /* matches your dark bg */
-    transform: translateY(-1px);
-}
-
-/* Mobile layout */
-@media (max-width: 720px) {
-    .other-links ul {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .other-links a {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
-    </style>
+    body.light{--bg:#f6f8fb;--panel:#fff;--panel2:#f8fafc;--text:#0d1728;--muted:#5f6f86;--line:#dce3ec;--chip:#eef4fb;--shadow:0 14px 40px rgba(24,39,75,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}.muted{color:var(--muted)}
+    .nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb,var(--line) 80%,transparent)}
+    .navin{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:850;letter-spacing:.01em}.brand span{color:var(--accent)}
+    .links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}.nav-actions{display:flex;gap:10px;align-items:center}
+    .iconbtn,.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer}.btn.primary{background:var(--accent);border-color:var(--accent);color:#07101e}.btn:hover,.iconbtn:hover{transform:translateY(-1px)}
+    .hero{padding:86px 0 50px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--accent2);font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent2) 15%,transparent)}
+    .hero-grid{display:grid;grid-template-columns:1.55fr .85fr;gap:34px;align-items:stretch}.hero h1{font-size:clamp(46px,7vw,78px);line-height:1.02;margin:18px 0 20px;letter-spacing:-.045em}.hero h1 span{color:var(--accent)}
+    .lead{font-size:20px;color:var(--muted);max-width:760px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 30px}.meta{display:flex;flex-wrap:wrap;gap:10px}.tag{border:1px solid var(--line);background:var(--chip);padding:7px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+    .hero-card{background:linear-gradient(180deg,color-mix(in srgb,var(--panel) 96%,#17315b),var(--panel));border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between}.hero-card h3{margin:0 0 10px;font-size:20px}.hero-card ul{margin:18px 0 0;padding-left:19px}.hero-card li{margin:10px 0}.availability{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:20px;margin-top:22px;color:var(--muted)}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 64px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}.metric b{font-size:28px;display:block}.metric span{color:var(--muted);font-size:13px}
+    section{padding:34px 0 68px}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:24px}.kicker{color:var(--accent);font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.12em}.section-head h2{font-size:34px;margin:4px 0 0;letter-spacing:-.025em}.section-head p{max-width:580px;color:var(--muted);margin:0}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted)}
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.skill-group{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.skill-group h3{margin:0 0 12px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:var(--chip);border:1px solid var(--line);color:var(--muted);border-radius:10px;padding:7px 9px;font-size:13px}
+    .timeline{display:grid;gap:16px}.role{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}.role-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.role h3{margin:0;font-size:20px}.role .company{color:var(--accent2);font-weight:750}.role .date{color:var(--muted);font-size:14px;white-space:nowrap}.role ul{margin:17px 0 0;padding-left:20px}.role li{margin:8px 0;color:var(--muted)}
+    .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.case{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;position:relative;overflow:hidden}.case:after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;right:-70px;top:-70px;background:color-mix(in srgb,var(--accent) 12%,transparent)}.case .label{font-size:12px;color:var(--accent);font-weight:850;text-transform:uppercase;letter-spacing:.08em}.case h3{margin:7px 0 8px}.case p{color:var(--muted)}.case .flow{font:700 13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;border:1px dashed var(--line);background:var(--panel2);padding:12px;border-radius:12px;color:var(--text)}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{display:flex;flex-direction:column;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.project h3{margin:0}.project p{margin:0;color:var(--muted);flex:1}.project a{color:var(--accent);font-weight:800;font-size:14px}
+    .contact{background:linear-gradient(135deg,color-mix(in srgb,var(--panel) 92%,#18335e),var(--panel));border:1px solid var(--line);border-radius:24px;padding:34px;display:grid;grid-template-columns:1.5fr .8fr;gap:28px}.contact h2{font-size:34px;margin:0 0 10px}.contact p{color:var(--muted)}.contact-links{display:grid;gap:10px;align-content:center}.contact-links a{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.contact-links a:hover{border-color:var(--accent)}
+    footer{padding:24px 0 40px;color:var(--muted);font-size:13px}.small-note{font-size:12px;color:var(--muted);margin-top:10px}
+    @media(max-width:900px){.links{display:none}.hero-grid,.contact{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.grid3,.projects{grid-template-columns:1fr 1fr}.case-grid{grid-template-columns:1fr}.hero{padding-top:58px}}
+    @media(max-width:620px){.wrap{width:min(100% - 24px,var(--max))}.hero h1{font-size:46px}.lead{font-size:18px}.metrics,.grid3,.skills,.projects{grid-template-columns:1fr}.role-top{display:block}.role .date{margin-top:5px}.section-head{display:block}.section-head p{margin-top:10px}.nav-actions .btn{display:none}.contact{padding:24px}}
+  </style>
 </head>
-<body data-theme="dark">
-
-<header>
-    <div class="nav-inner">
-        <div class="brand">
-            <div class="brand-initials">AR</div>
-            <div class="brand-text">
-                <div class="brand-name">Atheeq R</div>
-               <div class="brand-role">Senior Backend Engineer – Integrations & Commerce Systems</div>
-            </div>
-        </div>
-
-        <!-- Mobile hamburger -->
-        <button class="nav-menu-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
-            ☰
-        </button>
-
-      <nav class="nav-links" id="navLinks">
-    <a href="#summary" data-section="summary">Summary</a>
-    <a href="#skills" data-section="skills">Skills</a>
-    <a href="#experience" data-section="experience">Experience</a>
-       <a href="#case-studies" data-section="case-studies">Case Studies</a>
-    <a href="#projects" data-section="projects">Projects</a>
-    <a href="#education" data-section="education">Education</a>
-    <a href="#contact" class="nav-cta" data-section="contact">Contact</a>
-    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark/light theme">
-        <span class="theme-icon">🌙</span>
-    </button>
-</nav>
+<body>
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top">Atheeq <span>R</span></a>
+      <nav class="links" aria-label="Primary">
+        <a href="#expertise">Expertise</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#case-studies">Case Studies</a><a href="#projects">Projects</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme" class="iconbtn" aria-label="Toggle theme">◐</button>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
     </div>
-</header>
+  </header>
 
-
-<main class="page">
-
-    <!-- HERO -->
-    <section class="hero" id="top">
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
         <div>
-            <div class="hero-main-title">
-                Senior Backend Engineer<br />
-                E-commerce Platforms & Integrations · Shopify Plus · Magento 2 · POS/ERP · AWS Cloud
-            </div>
-            <p class="hero-tagline">
-              10+ years of experience delivering scalable, high-performance e-commerce and enterprise platforms across UAE, Singapore, Australia, and India.
-            </p>
-
-            <div class="hero-highlight">
-                <span>Impact</span>
-                18%+ conversion uplift · 90+ Lighthouse performance · 25% SLA improvement
-            </div>
-
-            <div class="hero-actions">
-                <!-- Make sure the filename matches your PDF -->
-            <a href="Assets/Atheeq_R_Senior_Backend_Engineer_Dubai.pdf" class="btn btn-primary" target="_blank" rel="noopener">
-  Download Resume (PDF)
-</a>
-                <a href="#experience" class="btn btn-ghost">
-                    View Experience
-                </a>
-            </div>
-
-            <div class="hero-meta">
-                <span>Based in Dubai · Open to roles in UAE / Remote</span>
-                <span>Magento 2 · Shopify Plus · AWS · Microservices</span>
-            </div>
+          <div class="eyebrow"><span class="dot"></span>Senior Backend Engineer · Dubai</div>
+          <h1>Building reliable <span>distributed systems</span> for commerce.</h1>
+          <p class="lead">10+ years across backend engineering, APIs, payments, order and inventory flows, POS/ERP integrations, and cloud platforms. I focus on systems that keep working when dependencies fail, traffic grows, and business workflows get complicated.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="Assets/Atheeq_R_Senior_Backend_Engineer_Dubai.pdf" target="_blank" rel="noopener">View Resume</a>
+            <a class="btn" href="https://github.com/atheeqsyed" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/atheeq-r/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="meta">
+            <span class="tag">Distributed Systems</span><span class="tag">REST / GraphQL / Webhooks</span><span class="tag">Payments & Idempotency</span><span class="tag">Event-Driven Integrations</span><span class="tag">AWS</span><span class="tag">Shopify Plus</span><span class="tag">Magento 2</span>
+          </div>
         </div>
-
         <aside class="hero-card">
-            <h2>Profile Snapshot</h2>
-            <p>
-                Senior Software Engineer specializing in Shopify Plus and Magento 2, with deep expertise in checkout,
-                payment gateways, POS/ERP integrations, and AWS-based cloud architectures.
-            </p>
+          <div>
+            <h3>What I work on</h3>
             <ul>
-                <li>Architected and optimized 15+ enterprise-scale e-commerce and gov-tech platforms.</li>
-                <li>Designed CI/CD pipelines reducing deployment from 1 day to 30 minutes.</li>
-                <li>Scaled platforms to handle 20K+ monthly orders with high uptime.</li>
+              <li>Reliable order, payment and inventory workflows across multiple systems.</li>
+              <li>API and integration architecture across commerce, POS, ERP and aggregator platforms.</li>
+              <li>Failure handling with idempotency, retries, queues, reconciliation and observability.</li>
+              <li>Performance, caching, deployment automation and cloud scalability.</li>
             </ul>
+          </div>
+          <div class="availability"><span class="dot"></span>Open to Senior Backend, Integration and Solution Architecture roles</div>
         </aside>
+      </div>
     </section>
 
-    <!-- TECH STACK LOGO ROW -->
-<section id="tech-stack">
-    <div class="section-heading">
-        <div>Tech Stack <span>Tools I use most</span></div>
+    <div class="wrap metrics" aria-label="Career highlights">
+      <div class="metric"><b>10+ yrs</b><span>Backend & enterprise engineering</span></div>
+      <div class="metric"><b>20K+</b><span>Monthly commerce orders supported</span></div>
+      <div class="metric"><b>25%</b><span>Checkout failure reduction</span></div>
+      <div class="metric"><b>30 min</b><span>CI/CD deployment time, down from 1 day</span></div>
     </div>
 
-    <!-- Empty container – JS will fill this -->
-    <div class="tech-stack-row" id="techStackRow"></div>
-</section>
-
-
-    <!-- SUMMARY -->
-    <section id="summary">
-        <div class="section-heading">
-            <div>Summary <span>Short overview of expertise</span></div>
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">System design</div><h2>Engineering focus</h2></div><p>I position technology around business failure modes and workload characteristics—not around a tool list.</p></div>
+        <div class="grid3">
+          <article class="card"><h3>Distributed workflows</h3><p>Designing multi-service order and inventory flows with idempotency, retries, queue-based processing and reconciliation.</p></article>
+          <article class="card"><h3>API ecosystems</h3><p>REST, GraphQL and webhook integrations with security, middleware, observability and safe retry behaviour.</p></article>
+          <article class="card"><h3>Commerce integrations</h3><p>Connecting Shopify, Magento, POS, ERP, payments and aggregators while maintaining data consistency across channels.</p></article>
+          <article class="card"><h3>Performance & data</h3><p>Execution plans, indexing, Redis caching, read-heavy workload strategies, data growth and production measurement.</p></article>
+          <article class="card"><h3>Cloud & reliability</h3><p>AWS services, containerized workloads, CI/CD and operational patterns for high-availability systems.</p></article>
+          <article class="card"><h3>Production engineering</h3><p>Incident investigation, payment/order troubleshooting, logging, metrics and cross-team recovery of business-critical flows.</p></article>
         </div>
-        <p class="muted">
-            Senior Software Engineer with 10+ years of experience delivering scalable, high-performance e-commerce
-            platforms across UAE, Singapore, Australia, and India. Specialized in Shopify Plus and Magento 2, with
-            deep expertise in checkout systems, payment gateways, POS/ERP integrations, and AWS-based cloud
-            architectures. Proven track record of improving conversion rates (18%+), enabling real-time omnichannel
-            inventory, and delivering secure, enterprise-grade solutions for multi-brand retail and hospitality businesses.
-        </p>
+      </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
-        <div class="section-heading">
-            <div>Technical Skills <span>Core stack & tools</span></div>
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Technical stack</div><h2>Core skills</h2></div><p>Grouped by the way I use them in production rather than by basic technology categories.</p></div>
+        <div class="skills">
+          <div class="skill-group"><h3>Backend & APIs</h3><div class="chips"><span class="chip">PHP</span><span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">C# / .NET</span><span class="chip">REST</span><span class="chip">GraphQL</span><span class="chip">Webhooks</span><span class="chip">API Security</span></div></div>
+          <div class="skill-group"><h3>Architecture & messaging</h3><div class="chips"><span class="chip">Distributed Systems</span><span class="chip">Microservices</span><span class="chip">Event-Driven Architecture</span><span class="chip">Idempotency</span><span class="chip">Transactional Outbox</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">Queues / DLQ</span></div></div>
+          <div class="skill-group"><h3>Data & performance</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">MongoDB</span><span class="chip">DynamoDB</span><span class="chip">Redis</span><span class="chip">Execution Plans</span><span class="chip">Caching</span></div></div>
+          <div class="skill-group"><h3>Cloud & delivery</h3><div class="chips"><span class="chip">AWS ECS</span><span class="chip">Lambda</span><span class="chip">API Gateway</span><span class="chip">RDS</span><span class="chip">CloudFront</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span></div></div>
+          <div class="skill-group"><h3>Commerce platforms</h3><div class="chips"><span class="chip">Shopify Plus</span><span class="chip">Magento 2</span><span class="chip">Revel POS</span><span class="chip">Supy</span><span class="chip">Xero</span><span class="chip">Grubtech</span><span class="chip">Payment Gateways</span><span class="chip">Aggregator Integrations</span></div></div>
+          <div class="skill-group"><h3>Engineering practice</h3><div class="chips"><span class="chip">System Design</span><span class="chip">CI/CD</span><span class="chip">Observability</span><span class="chip">Postman</span><span class="chip">Jira</span><span class="chip">Performance Tuning</span><span class="chip">Incident Resolution</span><span class="chip">Cross-functional Delivery</span></div></div>
         </div>
-
-        <div class="skills-grid">
-            <div class="skill-block">
-                <h3>Languages & Frameworks</h3>
-                <div class="skill-tags">
-                    <span>PHP 8</span><span>JavaScript (ES6+)</span><span>TypeScript</span>
-                    <span>C#</span><span>ASP.NET Core</span><span>Laravel</span><span>Symfony</span>
-                </div>
-            </div>
-
-            <div class="skill-block">
-                <h3>E-commerce & CMS</h3>
-                <div class="skill-tags">
-                    <span>Magento 2 (Commerce & Cloud)</span><span>Shopify Plus</span><span>WooCommerce</span>
-                    <span>WordPress</span>
-                </div>
-            </div>
-
-            <div class="skill-block">
-                <h3>Cloud & DevOps</h3>
-                <div class="skill-tags">
-                    <span>AWS (ECS, Lambda, RDS, CloudFront)</span><span>Docker</span><span>Kubernetes</span>
-                    <span>CI/CD</span><span>Jenkins</span><span>Terraform</span><span>GitHub Actions</span>
-                </div>
-            </div>
-
-            <div class="skill-block">
-                <h3>Databases & Search</h3>
-                <div class="skill-tags">
-                    <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Elasticsearch</span>
-                    <span>DynamoDB</span>
-                </div>
-            </div>
-
-            <div class="skill-block">
-                <h3>Testing & Monitoring</h3>
-                <div class="skill-tags">
-                    <span>PHPUnit</span><span>Jest</span><span>Cypress</span><span>Postman</span><span>JMeter</span>
-                    <span>GA4</span><span>GTM</span><span>New Relic</span><span>Datadog</span><span>Grafana</span>
-                </div>
-            </div>
-
-            <div class="skill-block">
-                <h3>Integrations</h3>
-                <div class="skill-tags">
-                    <span>REST</span><span>GraphQL</span><span>Webhooks</span><span>Stripe</span><span>PayPal</span>
-                    <span>Apple Pay</span><span>Razorpay</span><span>Aramex</span><span>Grubtech</span>
-                    <span>Supy</span><span>Xero</span><span>Revel POS</span>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience">
-        <div class="section-heading">
-            <div>Experience <span>Recent roles & impact</span></div>
-        </div>
-
-        <div class="card-grid">
-            <article class="card">
-                <h3>Knoops – Dubai</h3>
-                <h4>Senior Software Engineer · Jan 2025 – Present</h4>
-                <div class="chip-row">
-                    <span class="chip">Shopify Plus</span>
-                    <span class="chip">Supy · Revel</span>
-                    <span class="chip">Grubtech</span>
-                    <span class="chip">Stripe</span>
-                </div>
-                <ul>
-                    <li>Led Shopify Plus development for a multi-location retail brand, improving mobile UX and conversion rates by 18%.</li>
-                    <li>Led Aldar E-GOAL POS integration using Revel APIs to automate daily VAT-exclusive sales and transaction reporting.</li>
-                    <li>Resolved GraphQL checkout failures by debugging JavaScript and API flows, restoring full transaction capability.</li>
-                    <li>Engineered webhook-driven sync between Supy and Revel POS, ensuring real-time stock accuracy across channels.</li>
-                    <li>Automated Revel–Xero–Supy data pipelines, eliminating manual reconciliation and saving ~20 hours/month.</li>
-                    <li>Developed Grubtech integration with Talabat/Noon/Deliveroo for seamless aggregator → POS orders.</li>
-                    <li>Integrated Gorgias with Shopify CRM, improving SLA compliance by 25%.</li>
-                </ul>
-            </article>
-
-            <article class="card">
-                <h3>NDS Investments – Dubai</h3>
-                <h4>Senior Software Engineer – Group E-commerce Platforms · Jan 2024 – Present</h4>
-                <div class="chip-row">
-                    <span class="chip">Shopify Plus</span>
-                    <span class="chip">Cloudflare</span>
-                    <span class="chip">GA4 + GTM</span>
-                </div>
-                <ul>
-                    <li>Led multi-brand Shopify Plus customization with reusable Liquid components, boosting conversion by 18% across 5 brands.</li>
-                    <li>Architected Grubtech middleware for aggregator integrations, reducing manual errors by 40%.</li>
-                    <li>Automated multi-region reporting pipelines (Revel, Supy, Xero), improving finance & inventory accuracy.</li>
-                    <li>Optimized frontend/backend performance using Cloudflare CDN and caching, achieving Lighthouse scores of 90+.</li>
-                    <li>Designed Elementor + calendar API booking workflows, reducing booking time by 50%.</li>
-                    <li>Implemented GA4 + GTM data layers for full funnel e-commerce tracking.</li>
-                </ul>
-            </article>
-
-            <article class="card">
-                <h3>Samha Trading LLC – Dubai</h3>
-                <h4>Senior E-commerce Developer · Sept 2022 – Dec 2024</h4>
-                <div class="chip-row">
-                    <span class="chip">Magento 2 Cloud</span>
-                    <span class="chip">Aramex</span>
-                    <span class="chip">Payfort · Tabby</span>
-                </div>
-                <ul>
-                    <li>Migrated Magento Cloud to v2.4.5 with Redis/Varnish, cutting page load times by 30%.</li>
-                    <li>Integrated multi-payment gateways (Apple Pay, Tabby, Payfort) and Aramex shipping APIs to streamline checkout.</li>
-                    <li>Built CLI automation tools in PHP/Node for bulk product operations, reducing SKU onboarding by 40%.</li>
-                    <li>Enhanced GA4/GTM campaign attribution, improving marketing ROI by 30%.</li>
-                    <li>Deployed multi-store Magento with region-specific configurations across MENA markets.</li>
-                </ul>
-            </article>
-
-            <article class="card">
-                <h3>ATT Systems Group – Singapore & India</h3>
-                <h4>Software Engineer · 2015 – 2022</h4>
-                <div class="chip-row">
-                    <span class="chip">Gov-tech</span>
-                    <span class="chip">Microservices</span>
-                    <span class="chip">CI/CD</span>
-                </div>
-                <ul>
-                    <li>Engineered biometric authentication and payment APIs for public infrastructure and hospitals.</li>
-                    <li>Refactored monolithic .NET/Java applications into microservices, improving scalability by 50%.</li>
-                    <li>Implemented CI/CD pipelines with Jenkins and Git hooks, reducing deployment time from 1 day to 30 minutes.</li>
-                    <li>Delivered traffic and patient management platforms for LTA and hospitals, scaling to thousands of daily transactions.</li>
-                </ul>
-            </article>
-        </div>
-    </section>
-<!-- CASE STUDIES -->
-<section id="case-studies">
-  <div class="section-heading">
-    <div>Case Studies <span>Backend reliability & integrations</span></div>
-  </div>
-
-  <div class="card-grid">
-    <article class="card">
-      <h3>Inventory Sync: Shopify ↔ POS ↔ ERP</h3>
-      <h4>Problem</h4>
-      <p class="muted">Stock mismatches across channels caused overselling and manual reconciliation.</p>
-      <h4>Solution</h4>
-      <ul>
-        <li>Implemented API-driven sync with webhook processing and retry strategies.</li>
-        <li>Added correlation IDs and reconciliation checks for consistency.</li>
-      </ul>
-      <h4>Impact</h4>
-      <p class="muted">Improved real-time stock accuracy across channels and reduced operational mismatches.</p>
-    </article>
-
-    <article class="card">
-      <h3>Payment Reliability & Checkout Failures</h3>
-      <h4>Problem</h4>
-      <p class="muted">Intermittent checkout failures due to API edge cases and webhook retries.</p>
-      <h4>Solution</h4>
-      <ul>
-        <li>Debugged GraphQL checkout flows and hardened error handling.</li>
-        <li>Improved idempotency and retry handling for payment and order events.</li>
-      </ul>
-      <h4>Impact</h4>
-      <p class="muted">Reduced checkout failures and improved overall transaction reliability.</p>
-    </article>
-
-    <article class="card">
-      <h3>Performance: CDN + Caching Strategy</h3>
-      <h4>Problem</h4>
-      <p class="muted">Slow pages and inconsistent performance on mobile.</p>
-      <h4>Solution</h4>
-      <ul>
-        <li>Optimized caching layers and CDN configuration (Cloudflare + edge caching).</li>
-        <li>Improved asset delivery and reduced render-blocking resources.</li>
-      </ul>
-      <h4>Impact</h4>
-      <p class="muted">Achieved Lighthouse 90+ and improved mobile experience.</p>
-    </article>
-  </div>
-</section>
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="section-heading">
-            <div>Selected Projects <span>Key platforms delivered</span></div>
-        </div>
-
-        <div class="card-grid">
-            <article class="card">
-                <h3>Pixishoot Studio</h3>
-                <h4>Booking &amp; Content Platform</h4>
-                <p class="muted">
-                    Led platform enhancements and performance optimization, including Elementor + calendar API booking workflows,
-                    reducing booking time by 50% and improving site performance.
-                </p>
-                <div class="chip-row">
-                    <span class="chip">Shopify</span><span class="chip">Elementor</span><span class="chip">API Integrations</span>
-                </div>
-            </article>
-
-            <article class="card">
-                <h3>Talis Store</h3>
-                <h4>Magento Cloud Upgrade &amp; Performance</h4>
-                <p class="muted">
-                    Migrated and optimized Magento Cloud with Redis/Varnish, improving load time by 30% and strengthening
-                    multi-store stability for MENA markets.
-                </p>
-                <div class="chip-row">
-                    <span class="chip">Magento Cloud</span><span class="chip">Redis</span><span class="chip">Varnish</span>
-                </div>
-            </article>
-
-            <article class="card">
-                <h3>LTA Queue Management</h3>
-                <h4>Singapore Government Platform</h4>
-                <p class="muted">
-                    Refactored queue management into microservices and integrated biometric APIs, improving
-                    scalability by 50% and supporting high-volume daily traffic.
-                </p>
-                <div class="chip-row">
-                    <span class="chip">Microservices</span><span class="chip">Biometric APIs</span><span class="chip">Gov-tech</span>
-                </div>
-            </article>
-
-            <article class="card">
-                <h3>Other Brands</h3>
-                <h4>NDS · Calla Couture · Ayeque · IWYL · Rasasi Perfumes · HTMS · EQMS · Doctornatures</h4>
-                <p class="muted">
-                    Contributed to architecture, integrations and performance optimization across a portfolio of
-                    e-commerce and internal platforms in UAE, Singapore and India.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education">
-        <div class="section-heading">
-            <div>Education <span>Academic background</span></div>
-        </div>
-
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Experience</div><h2>Selected roles & impact</h2></div><p>Recent work emphasizes backend reliability, integration architecture and transaction-heavy commerce systems.</p></div>
         <div class="timeline">
-            <div class="timeline-item">
-                <h3>Bachelor of Engineering in Computer Science</h3>
-                <p>MVJ College of Engineering, Bangalore · Visvesvaraya Technological University (2014)</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Diploma in Computer Science & Engineering</h3>
-                <p>SJM University, Karnataka · Directorate of Technical Education (2010)</p>
-            </div>
+          <article class="role"><div class="role-top"><div><h3>Senior Backend Engineer</h3><div class="company">Knoops · Dubai</div></div><div class="date">Jan 2025 – Present</div></div><ul><li>Lead backend engineering for a distributed commerce environment integrating Shopify, Revel POS, Supy ERP and aggregator systems.</li><li>Architect integration workflows for consistent order and inventory synchronization across sales and operational systems.</li><li>Design API-driven inventory flows supporting near real-time stock visibility across channels.</li><li>Investigate and resolve production incidents across payment and order-processing workflows.</li></ul></article>
+          <article class="role"><div class="role-top"><div><h3>Senior Software Engineer – Group E-commerce Platforms</h3><div class="company">NDS Investments · Dubai</div></div><div class="date">Jan 2024 – Present</div></div><ul><li>Group-level platform role covering architecture, integration standards and scalable commerce implementations across multiple brands.</li><li>Architected middleware integrations for aggregator and operational platforms, reducing manual errors and reconciliation effort.</li><li>Optimized delivery and caching strategies with Cloudflare and Redis, achieving Lighthouse scores above 90 on selected properties.</li><li>Built booking and analytics integrations across web, calendar APIs, GA4 and GTM.</li></ul></article>
+          <article class="role"><div class="role-top"><div><h3>Senior E-commerce Engineer</h3><div class="company">Samha Trading LLC · Dubai</div></div><div class="date">Sep 2022 – Dec 2024</div></div><ul><li>Developed and maintained Magento Cloud solutions for MENA retail environments.</li><li>Migrated Magento Cloud to 2.4.5 with Redis and Varnish, improving load times by 30%.</li><li>Integrated Apple Pay, Tabby, Payfort and Aramex shipping APIs.</li><li>Built CLI automation for bulk product operations, reducing onboarding effort by 40%.</li></ul></article>
+          <article class="role"><div class="role-top"><div><h3>Software Engineer</h3><div class="company">ATT Systems Group · Singapore / Australia / India</div></div><div class="date">2015 – 2022</div></div><ul><li>Built enterprise backend systems using C#, ASP.NET/.NET Framework and SQL Server for government, healthcare and infrastructure clients.</li><li>Designed secure APIs, authentication modules and transaction-oriented backend services.</li><li>Supported high-availability systems serving thousands of concurrent users and migrated legacy applications toward modular/service-oriented architectures.</li><li>Implemented CI/CD automation that reduced deployment time from 1 day to around 30 minutes.</li></ul></article>
         </div>
+      </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications">
-        <div class="section-heading">
-            <div>Certifications & Achievements <span>Proof of capability</span></div>
+    <section id="case-studies">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Architecture thinking</div><h2>Selected case studies</h2></div><p>Short examples of how I approach reliability and integration problems.</p></div>
+        <div class="case-grid">
+          <article class="case"><div class="label">Reliability</div><h3>Payment succeeds, order fails</h3><p>A distributed transaction can partially succeed even when an API call looks healthy. The design needs safe retries and recovery.</p><div class="flow">Client → API → Order → Event Bus → Payment / Inventory / Fulfilment<br>Idempotency · Outbox · Retry/Backoff · DLQ · Reconciliation</div></article>
+          <article class="case"><div class="label">Integration</div><h3>Multi-channel inventory synchronization</h3><p>Stock updates must stay consistent across e-commerce, POS and ERP systems even when webhooks are delayed or duplicated.</p><div class="flow">Shopify ↔ Integration Layer ↔ POS / ERP<br>Webhook validation · Deduplication · Retry · Audit / reconciliation</div></article>
+          <article class="case"><div class="label">Performance</div><h3>Slow query ≠ add another index</h3><p>Production tuning starts with the access pattern and execution plan, then considers the workload before choosing the optimization.</p><div class="flow">Query → Plan → Workload → Strategy → Measure<br>Index · Rewrite · Redis · Replica · Partition · Async</div></article>
+          <article class="case"><div class="label">Resilience</div><h3>Synchronous dependency failure</h3><p>When checkout depends directly on multiple services, one slow dependency can cascade into timeouts and poor customer experience.</p><div class="flow">Checkout → Dependency chain → Timeout cascade<br>Circuit breaker · Async processing · Timeouts · Observability</div></article>
         </div>
-
-        <ul class="contact-list">
-            <li>Employee of the Month – ATT Systems (Sept 2019)</li>
-            <li>Agile / Scrum Certification</li>
-            <li>AWS Certified Solutions Architect – Associate (Expected 2025)</li>
-            <li>Magento 2 Certified Professional Developer (Planned 2025)</li>
-        </ul>
+      </div>
     </section>
 
-    <!-- OTHER LINKS (Hobbies / Contact pages) -->
-    <section id="other" class="other-links">
-        <div class="section-heading">
-            <div>Other <span>Extra pages</span></div>
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">Projects</div><h2>Selected platforms</h2></div><p>A mix of commerce, booking and enterprise systems across UAE and international clients.</p></div>
+        <div class="projects">
+          <article class="project"><h3>Talis Store</h3><p>Magento Cloud platform with payment, shipping, Redis/Varnish performance work and multi-store MENA configuration.</p><span class="muted">Magento 2 · Redis · Varnish · Payments</span></article>
+          <article class="project"><h3>Pixishoot Studio</h3><p>Booking and content platform with web performance improvements, calendar workflow integration and responsive UX.</p><a href="https://pixishoot.studio" target="_blank" rel="noopener">View project ↗</a></article>
+          <article class="project"><h3>LTA / Enterprise Platforms</h3><p>Government and infrastructure systems involving backend APIs, authentication, queue management and high-availability enterprise services.</p><span class="muted">C# · ASP.NET · SQL Server · APIs</span></article>
         </div>
-        <ul>
-            <li><a href="Hobbies.html">Hobbies & Interests</a></li>
-            <li><a href="Contact.html">Contact (full page)</a></li>
-        </ul>
+      </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
-        <div class="section-heading">
-            <div>Contact <span>Let’s work together</span></div>
-        </div>
-
-        <div class="contact-grid">    
-            <div class="contact-card">
-                <h3>Contact Details</h3>
-                <ul class="contact-list">
-                    <li><strong>Email:</strong> <a href="mailto:atheeqmvj@gmail.com">atheeqmvj@gmail.com</a></li>
-                    <li><strong>Phone:</strong> <a href="tel:+971554577967">+971 55 457 7967</a></li>
-                    <li><strong>Location:</strong> Dubai, United Arab Emirates</li>
-                    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/atheeq-r-7304298b" target="_blank" rel="noopener">linkedin.com/in/atheeq-r-7304298b</a></li>
-                </ul>
-            </div>
-
-            <div class="contact-card">
-                <h3>How I Can Help</h3>
-                <p class="muted">
-                    I’m interested in roles where I can own or lead end-to-end e-commerce platforms:
-                    from architecture and integrations to performance optimization and automation.
-                    Open to full-time roles in UAE and remote opportunities.
-                </p>
-            </div>
-        </div>
+      <div class="wrap contact">
+        <div><div class="kicker">Contact</div><h2>Open to the right backend challenge.</h2><p>Interested in Senior Backend Engineer, Integration Engineer and Solution Architect opportunities in the UAE or remote environments where reliability, integrations and system design matter.</p><div class="small-note">Dubai, United Arab Emirates</div></div>
+        <div class="contact-links"><a href="mailto:atheeqmvj@gmail.com">atheeqmvj@gmail.com</a><a href="https://www.linkedin.com/in/atheeq-r/" target="_blank" rel="noopener">LinkedIn / atheeq-r ↗</a><a href="https://github.com/atheeqsyed" target="_blank" rel="noopener">GitHub / atheeqsyed ↗</a></div>
+      </div>
     </section>
+  </main>
 
-</main>
-
-<footer>
-    © <span id="year"></span> Atheeq R · Senior Backend Engineer
-</footer>
-
-<script>
-    // ----- Year -----
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // ----- Theme toggle -----
-    const themeToggle = document.getElementById("themeToggle");
-    const themeIcon = themeToggle ? themeToggle.querySelector(".theme-icon") : null;
-
-    function setTheme(theme) {
-        document.body.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-        if (themeIcon) {
-            themeIcon.textContent = theme === "dark" ? "🌙" : "☀️";
-        }
-    }
-
-    (function initTheme() {
-        const stored = localStorage.getItem("theme");
-        if (stored === "dark" || stored === "light") {
-            setTheme(stored);
-        } else {
-            const prefersDark = window.matchMedia &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches;
-            setTheme(prefersDark ? "dark" : "light");
-        }
-    })();
-
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            const current = document.body.getAttribute("data-theme");
-            setTheme(current === "dark" ? "light" : "dark");
-        });
-    }
-
-    // ----- Scroll spy for active menu highlight -----
-      // ----- Scroll spy for active menu highlight -----
-    const sections = document.querySelectorAll("main section[id]");
-    const navLinksContainer = document.getElementById("navLinks");
-    const navLinkEls = document.querySelectorAll(".nav-links a[data-section]");
-
-    if (sections.length && navLinkEls.length) {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.id;
-                        navLinkEls.forEach((link) => {
-                            link.classList.toggle(
-                                "active",
-                                link.getAttribute("data-section") === id
-                            );
-                        });
-                    }
-                });
-            },
-            {
-                root: null,
-                threshold: 0.35,
-                rootMargin: "-10% 0px -55% 0px"
-            }
-        );
-
-        sections.forEach((section) => observer.observe(section));
-    }
-
-    // ----- Mobile nav toggle -----
-    const navToggleBtn = document.getElementById("navToggle");
-
-    if (navToggleBtn && navLinksContainer) {
-        navToggleBtn.addEventListener("click", () => {
-            navLinksContainer.classList.toggle("is-open");
-        });
-
-        // Close nav when a link is clicked (helpful on mobile)
-        navLinksContainer.addEventListener("click", (e) => {
-            if (e.target.matches("a")) {
-                navLinksContainer.classList.remove("is-open");
-            }
-        });
-    }// ---------- Tech Stack data (JSON-style) ----------
-    const TECH_STACK_ITEMS = [
-        {
-            id: "magento",
-            name: "Magento 2",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg",
-            category: "E-commerce"
-        },
-        {
-            id: "shopify",
-            name: "Shopify Plus",
-            logo: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg",
-            category: "E-commerce"
-        },
-        {
-            id: "aws",
-            name: "AWS",
-            logo: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
-            category: "Cloud"
-        },
-        {
-            id: "php",
-            name: "PHP 8",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-            category: "Backend"
-        },
-        {
-            id: "javascript",
-            name: "JavaScript",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            category: "Frontend"
-        },
-        {
-            id: "nodejs",
-            name: "Node.js",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            category: "Backend"
-        },
-        {
-            id: "docker",
-            name: "Docker",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-            category: "DevOps"
-        },
-        {
-            id: "kubernetes",
-            name: "Kubernetes",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
-            category: "DevOps"
-        },
-        {
-            id: "terraform",
-            name: "Terraform",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
-            category: "DevOps"
-        },
-        {
-            id: "redis",
-            name: "Redis",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
-            category: "Database / Cache"
-        },
-        {
-            id: "mysql",
-            name: "MySQL",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-            category: "Database"
-        },
-        {
-            id: "postgresql",
-            name: "PostgreSQL",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-            category: "Database"
-        },
-        {
-            id: "mongodb",
-            name: "MongoDB",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-            category: "Database"
-        },
-        {
-            id: "elasticsearch",
-            name: "Elasticsearch",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg",
-            category: "Search"
-        },
-        {
-            id: "graphql",
-            name: "GraphQL",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-            category: "API"
-        },
-        {
-            id: "firebase",
-            name: "Firebase",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-            category: "Cloud / Realtime"
-        },
-        {
-            id: "react",
-            name: "React",
-            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            category: "Frontend"
-        }
-    ];
-
-    function renderTechStack() {
-        const row = document.getElementById("techStackRow");
-        if (!row) return;
-
-        TECH_STACK_ITEMS.forEach(item => {
-            const pill = document.createElement("div");
-            pill.className = "logo-pill";
-
-            const img = document.createElement("img");
-            img.src = item.logo;
-            img.alt = item.name + " logo";
-            img.loading = "lazy";
-
-            const label = document.createElement("span");
-            label.textContent = item.name;
-
-            pill.appendChild(img);
-            pill.appendChild(label);
-            row.appendChild(pill);
-        });
-    }
-
-    // run after script loads (script is at bottom so DOM is ready)
-    renderTechStack();
-
-
-</script>
-
+  <footer><div class="wrap">© <span id="year"></span> Atheeq R · Senior Backend Engineer</div></footer>
+  <script>
+    const btn=document.getElementById('theme');
+    const saved=localStorage.getItem('theme');
+    if(saved==='light') document.body.classList.add('light');
+    btn.addEventListener('click',()=>{document.body.classList.toggle('light');localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark')});
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
