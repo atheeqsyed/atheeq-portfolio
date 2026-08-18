@@ -15,51 +15,89 @@ https://atheeqsyed.github.io/atheeq-portfolio/
 - Payment & Order Workflows
 - Inventory & Multi-System Integrations
 - Reliability, Idempotency & Failure Recovery
+- Production Troubleshooting & Observability
 - AWS, Docker & CI/CD
 - Shopify Plus, Magento 2, POS & ERP Integrations
 
-## Portfolio Highlights
+## Selected Engineering Case Studies
 
-The portfolio includes selected engineering work around:
+The portfolio includes architecture-focused case studies covering:
 
 - Reliable payment and order-processing workflows
-- Inventory synchronization across commerce, POS and operational systems
-- API and webhook integrations
-- Event-driven architecture and failure recovery
-- Production troubleshooting and observability
-- Cloud deployment and CI/CD improvements
+- Multi-channel inventory synchronization
+- API and webhook reliability
+- Idempotency and duplicate-event handling
+- Retry, backoff, dead-letter and reconciliation strategies
+- Database and application performance analysis
+- Failure handling across synchronous dependencies
 
-## Architecture Principles
+These case studies focus on the engineering decisions and reliability patterns involved in operating distributed production systems.
 
-I generally design systems around:
+## Engineering Principles
+
+I generally approach backend systems around:
 
 - Explicit failure handling
 - Idempotent operations
 - Durable event processing
 - Controlled retries and backoff
-- Observability
+- Observability and correlation
 - Reconciliation and recovery
 - Clear service boundaries
+- Evidence-driven performance optimization
 
-## Tech Stack
+## Core Tech Stack
 
-**Backend**
-Node.js · TypeScript · C# · .NET · PHP
+**Backend & APIs**  
+Node.js · TypeScript · C# · .NET · PHP · REST · GraphQL · Webhooks
 
-**APIs & Integration**
-REST · GraphQL · Webhooks · API Security
+**Architecture & Messaging**  
+Distributed Systems · Microservices · Event-Driven Architecture · Transactional Outbox · Kafka · RabbitMQ · DLQ
 
-**Architecture**
-Distributed Systems · Microservices · Event-Driven Architecture · Design Patterns
+**Data & Performance**  
+MySQL · PostgreSQL · SQL Server · MongoDB · DynamoDB · Redis · Query & Execution Plan Analysis
 
-**Cloud & DevOps**
-AWS · Docker · CI/CD · Git · GitHub Actions
+**Cloud & Delivery**  
+AWS · Docker · Kubernetes · CI/CD · Git · GitHub Actions · Jenkins
 
-**Commerce & Platforms**
-Shopify Plus · Magento 2 · POS · ERP · Payment Integrations
+**Commerce & Integrations**  
+Shopify Plus · Magento 2 · Revel POS · Supy · Xero · Grubtech · Payment Integrations
+
+## Portfolio Structure
+
+The portfolio presents:
+
+- Engineering background and areas of specialization
+- Technical stack grouped by engineering responsibility
+- Selected professional experience
+- Architecture and reliability case studies
+- Selected commerce and enterprise projects
+- Education and professional contact information
 
 ## Repository
 
-This repository contains the source for my personal engineering portfolio, deployed using GitHub Pages.
+This repository contains the source code for my personal engineering portfolio.
 
-The site is built as a lightweight static application with a focus on performance, accessibility and responsive design.
+The site is implemented as a lightweight static application using semantic HTML, CSS and vanilla JavaScript and is deployed through GitHub Pages.
+
+The implementation is designed around:
+
+- Responsive layouts across desktop, tablet and mobile
+- Minimal runtime dependencies
+- Fast page loading
+- Semantic HTML
+- Keyboard-accessible navigation
+- Reduced-motion support
+- SEO metadata and structured data
+- Accessible content structure
+
+## Connect
+
+**Portfolio:**  
+https://atheeqsyed.github.io/atheeq-portfolio/
+
+**LinkedIn:**  
+https://www.linkedin.com/in/atheeq-r/
+
+**GitHub:**  
+https://github.com/atheeqsyed
